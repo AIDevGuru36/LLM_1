@@ -1,0 +1,52 @@
+{
+  "data": {
+  "training_files": "filelists/train.txt",
+  "text_cleaners": ["english_cleaners"],
+  "max_wav_value": 32768.0,
+  "sampling_rate": 22050,
+  "load_mel_from_disk": false,
+  "add_noise": false,
+  "filter_length": 1024,
+  "hop_length": 256,
+  "win_length": 1024,
+  "n_mel_channels": 80,
+  "mel_fmin": 0.0,
+  "mel_fmax": 8000.0
+  },
+  
+    
+  "batch_size": 16,
+  "eval_batch_size": 16,
+  "epochs": 5000,
+  "learning_rate": 1e-4,
+
+  "n_speakers": 1,
+  "symbols": "_-!\\'(),.:;? abcdefghijklmnopqrstuvwxyz",
+  "cleaners": ["english_cleaners"],
+
+  "model": {
+    "hidden_channels": 192,
+    "filter_channels": 768,
+    "kernel_size": 3,
+    "n_blocks": 6,
+    "n_layers": 4,
+    "p_dropout": 0.1,
+    "n_flows": 12,
+    "n_group": 4,
+    "n_heads": 2,
+    "p_dropout_attn": 0.1,
+    "p_dropout_res": 0.1,
+    "p_dropout_post": 0.0,
+    "wn_channels": 192,
+    "n_layers_post": 5,
+    "use_sdp": false
+  },
+
+  "training": {
+    "log_interval": 100,
+    "eval_interval": 1000,
+    "checkpoint_interval": 1000,
+    "seed": 1234,
+    "fp16_run": false
+  }
+}
