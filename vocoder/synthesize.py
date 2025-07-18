@@ -91,8 +91,8 @@ tts = TTS(
 )
 
 # Run synthesis
-text = "This is information about the TTS system. For stars. It is a text-to-speech synthesis system that converts text into natural-sounding speech.Sue"
-que = "boss will return back permantely on July 4th, so I have to manage all here. Not sure if I have time to work on projects but will try"
+text = ""
+que = ""
 ans = ""
 output_path = "output.wav"
 
